@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="suite-level-params" value="this is suite level text"></parameter>
+  <test name="Test1">
+  <classes>
+  <class name="TestNGClasses.ParametersTest2">
+  <methods>
+  <include name="firstTest"></include>
+  </methods>
+  </class>
+  </classes>
+  </test> <!-- Test -->
+  <test name="Test2">
+  <parameter name="test-level-params" value="this is test level text"></parameter>
+  <classes>
+  <class name="TestNGClasses.ParametersTest2">
+  <methods>
+  <include name="secondTest"></include>
+  </methods>
+  </class>
+  </classes>
+  </test> <!-- Test -->
+  <test name="Test3">
+  <parameter name="suite-level-params" value="this is overiding suite params text"></parameter>
+  <parameter name="test-level-params" value="this is test level text for third scenario"></parameter>
+  <classes>
+  <class name="TestNGClasses.ParametersTest2">
+  <methods>
+  <include name="thirdTest"></include>
+  </methods>
+  </class>
+  </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
